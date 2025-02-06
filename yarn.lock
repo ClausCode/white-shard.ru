@@ -1990,6 +1990,13 @@
   dependencies:
     date-fns "4.1.0"
 
+"@payloadcms/translations@^3.21.0":
+  version "3.21.0"
+  resolved "https://registry.yarnpkg.com/@payloadcms/translations/-/translations-3.21.0.tgz#ef386dd0ba91ffa8af08d22174771f02b9f91a42"
+  integrity sha512-LmrBaDJ4K49/XIpnXr6SsrbhpkcVLVKnDtVQKAoYBKEFf+DwG/plqNWwYpAOX3N9se6iTJzy+UhUqPVqRhgJ1Q==
+  dependencies:
+    date-fns "4.1.0"
+
 "@payloadcms/ui@3.20.0":
   version "3.20.0"
   resolved "https://registry.yarnpkg.com/@payloadcms/ui/-/ui-3.20.0.tgz#24c3662f67a4bef8bc23de05b3cc93ece2ef843a"
