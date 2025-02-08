@@ -1,8 +1,6 @@
 import type { Metadata } from "next"
 import { JetBrains_Mono } from "next/font/google"
 
-import { ThemeProvider } from "@/features/theme"
-
 import "./globals.css"
 import { cn } from "@/shared/lib/utils"
 
@@ -29,7 +27,7 @@ export default function RootLayout({
 					jetbrainsMono.variable
 				)}
 			>
-				<ThemeProvider>{children}</ThemeProvider>
+				{children}
 			</body>
 		</html>
 	)

@@ -2,56 +2,37 @@
 
 @plugin 'tailwindcss-animate';
 
-@custom-variant dark (&:is(.dark *));
-
 @theme {
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
+	--color-background: #13111c;
+	--color-foreground: #ffffff;
+	--color-card: #1a1a1a;
+	--color-card-foreground: #ffffff;
+	--color-popover: #1a1a1a;
+	--color-popover-foreground: #ffffff;
+	--color-primary: #6b4de6;
+	--color-primary-foreground: #ffffff;
+	--color-secondary: #2a2438;
+	--color-secondary-foreground: #6b4de6;
+	--color-muted: #1a1a1a;
+	--color-muted-foreground: #a1a1aa;
+	--color-accent: #3b82f6;
+	--color-accent-foreground: #ffffff;
+	--color-destructive: #ff4747;
+	--color-destructive-foreground: #ffffff;
+	--color-border: #2a2438;
+	--color-input: #2a2438;
+	--color-ring: #6b4de6;
+	--color-chart-1: #6b4de6;
+	--color-chart-2: #ff9666;
+	--color-chart-3: #9b7aff;
+	--color-chart-4: #ffb599;
+	--color-chart-5: #4b36a6;
 
-	--color-card: var(--card);
-	--color-card-foreground: var(--card-foreground);
-
-	--color-popover: var(--popover);
-	--color-popover-foreground: var(--popover-foreground);
-
-	--color-primary: var(--primary);
-	--color-primary-foreground: var(--primary-foreground);
-
-	--color-secondary: var(--secondary);
-	--color-secondary-foreground: var(--secondary-foreground);
-
-	--color-muted: var(--muted);
-	--color-muted-foreground: var(--muted-foreground);
-
-	--color-accent: var(--accent);
-	--color-accent-foreground: var(--accent-foreground);
-
-	--color-destructive: var(--destructive);
-	--color-destructive-foreground: var(--destructive-foreground);
-
-	--color-border: var(--border);
-	--color-input: var(--input);
-	--color-ring: var(--ring);
-
-	--color-chart-1: var(--chart-1);
-	--color-chart-2: var(--chart-2);
-	--color-chart-3: var(--chart-3);
-	--color-chart-4: var(--chart-4);
-	--color-chart-5: var(--chart-5);
-
-	--radius-lg: var(--radius);
-	--radius-md: calc(var(--radius) - 2px);
-	--radius-sm: calc(var(--radius) - 4px);
+	--radius-lg: 0.5rem;
+	--radius-md: calc(0.5rem - 2px);
+	--radius-sm: calc(0.5rem - 4px);
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
-
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
 @layer base {
 	*,
 	::after,
@@ -65,62 +46,6 @@
 @layer utilities {
 	body {
 		font-family: "JetBrains Mono", monospace;
-	}
-}
-
-@layer base {
-	:root {
-		--background: #ffffff;
-		--foreground: #1a1a1a;
-		--card: #ffffff;
-		--card-foreground: #1a1a1a;
-		--popover: #ffffff;
-		--popover-foreground: #1a1a1a;
-		--primary: #6b4de6;
-		--primary-foreground: #ffffff;
-		--secondary: #f4f1ff;
-		--secondary-foreground: #6b4de6;
-		--muted: #f6f6f7;
-		--muted-foreground: #757575;
-		--accent: #3b82f6;
-		--accent-foreground: #ffffff;
-		--destructive: #ff4747;
-		--destructive-foreground: #ffffff;
-		--border: #e8e5f2;
-		--input: #e8e5f2;
-		--ring: #6b4de6;
-		--chart-1: #6b4de6;
-		--chart-2: #ff9666;
-		--chart-3: #9b7aff;
-		--chart-4: #ffb599;
-		--chart-5: #4b36a6;
-		--radius: 0.5rem;
-	}
-	.dark {
-		--background: #13111c;
-		--foreground: #ffffff;
-		--card: #1d1b26;
-		--card-foreground: #ffffff;
-		--popover: #1d1b26;
-		--popover-foreground: #ffffff;
-		--primary: #8b6fff;
-		--primary-foreground: #ffffff;
-		--secondary: #2d2b36;
-		--secondary-foreground: #ffffff;
-		--muted: #2d2b36;
-		--muted-foreground: #a1a1aa;
-		--accent: #60a5fa;
-		--accent-foreground: #ffffff;
-		--destructive: #ff4747;
-		--destructive-foreground: #ffffff;
-		--border: #2d2b36;
-		--input: #2d2b36;
-		--ring: #8b6fff;
-		--chart-1: #8b6fff;
-		--chart-2: #ff7d3b;
-		--chart-3: #b599ff;
-		--chart-4: #ffb599;
-		--chart-5: #6b4de6;
 	}
 }
 
