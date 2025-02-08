@@ -15,6 +15,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
 	admin: {
 		user: UserCollection.slug,
+		avatar: "default",
 		theme: "all",
 		suppressHydrationWarning: true,
 		importMap: {
