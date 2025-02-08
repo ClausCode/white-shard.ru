@@ -1,11 +1,13 @@
 {
 	"name": "base-nextjs-payloadcms",
 	"version": "0.1.0",
+	"type": "module",
 	"private": true,
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
+		"migrate": "payload migrate",
 		"lint": "next lint"
 	},
 	"dependencies": {
@@ -14,7 +16,7 @@
 		"@payloadcms/payload-cloud": "^3.20.0",
 		"@payloadcms/richtext-lexical": "^3.20.0",
 		"@payloadcms/translations": "^3.21.0",
-		"@radix-ui/react-slot": "^1.1.1",
+		"@radix-ui/react-slot": "^1.1.2",
 		"class-variance-authority": "^0.7.1",
 		"clsx": "^2.1.1",
 		"graphql": "^16.10.0",

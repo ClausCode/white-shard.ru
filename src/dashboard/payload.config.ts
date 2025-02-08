@@ -7,6 +7,7 @@ import { buildConfig } from "payload"
 import { fileURLToPath } from "url"
 
 import { MediaCollection, UserCollection } from "./collections"
+import { ruTranslations } from "./translations/ru.translation"
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -14,7 +15,7 @@ const dirname = path.dirname(filename)
 export default buildConfig({
 	admin: {
 		user: UserCollection.slug,
-		theme: "dark",
+		theme: "all",
 		suppressHydrationWarning: true,
 		importMap: {
 			baseDir: path.resolve(dirname)
@@ -23,12 +24,7 @@ export default buildConfig({
 	i18n: {
 		supportedLanguages: { ru },
 		translations: {
-			ru: {
-				general: {
-					locale: "Язык",
-					locales: "Языки"
-				}
-			}
+			ru: ruTranslations
 		}
 	},
 	collections: [UserCollection, MediaCollection],
@@ -42,11 +38,14 @@ export default buildConfig({
 	typescript: {
 		outputFile: path.resolve(dirname, "payload-types.ts")
 	},
-
+	routes: {
+		admin: "/dashboard"
+	},
 	db: postgresAdapter({
 		pool: {
 			connectionString: process.env.DATABASE_URI || ""
 		}
 	}),
+
 	plugins: [payloadCloudPlugin()]
 })
