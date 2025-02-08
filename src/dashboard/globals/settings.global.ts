@@ -69,11 +69,18 @@ export const SettingsGlobal: GlobalConfig = {
 			label: "📃 Контакты",
 			fields: [
 				{
-					name: "phone",
+					name: "telegram",
 					required: true,
 					type: "text",
-					label: "📞 Телефон",
-					defaultValue: "+7 (959) 596 77 03"
+					defaultValue: "white_shard",
+					label: "📞 Telegram профиль (без @)"
+				},
+				{
+					name: "message",
+					required: true,
+					type: "text",
+					label: "📃 Шаблон сообщения",
+					defaultValue: "Здравствуйте! Мне нужна консультация."
 				}
 			]
 		}

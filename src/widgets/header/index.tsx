@@ -1,4 +1,4 @@
-import { PhoneDisplay } from "@/features/phone-display"
+import { ContactDisplay } from "@/features/contact-display"
 
 import { ActionList } from "./_ui/action-list"
 import { Navigation } from "./_ui/navigation"
@@ -11,7 +11,7 @@ export async function AppHeader() {
 			logo={<AppLogo />}
 			navigation={<Navigation />}
 			navigationMobile={<Navigation useDropdown={false} />}
-			contacts={<PhoneDisplay />}
+			contacts={<ContactDisplay />}
 			actions={<ActionList />}
 		/>
 	)

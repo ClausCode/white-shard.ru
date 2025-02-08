@@ -1,3 +1,4 @@
 export type Contacts = {
-	phone: string
+	telegram: string
+	message: string
 }

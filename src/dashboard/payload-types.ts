@@ -240,7 +240,8 @@ export interface Setting {
       }[]
     | null;
   contacts: {
-    phone: string;
+    telegram: string;
+    message: string;
   };
   updatedAt?: string | null;
   createdAt?: string | null;
@@ -267,7 +268,8 @@ export interface SettingsSelect<T extends boolean = true> {
   contacts?:
     | T
     | {
-        phone?: T;
+        telegram?: T;
+        message?: T;
       };
   updatedAt?: T;
   createdAt?: T;

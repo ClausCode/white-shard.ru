@@ -3,12 +3,12 @@ import Link from "next/link"
 import { fetchAppContacts } from "@/shared/api/contacts.api"
 import { Contacts } from "@/shared/types/contacts.type"
 
-export async function Phone() {
+export async function Contact() {
 	const contacts = (await fetchAppContacts()) as Contacts
-	const href = `tel:+${contacts.phone?.replace(/[^0-9]/g, "")}`
+	const href = `https://t.me/${contacts.telegram}?text=${contacts.message}`
 	return (
 		<Link href={href} className="tracking-tighter">
-			{contacts.phone}
+			t.me/{contacts.telegram}
 		</Link>
 	)
 }
