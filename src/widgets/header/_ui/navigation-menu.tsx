@@ -62,7 +62,7 @@ export async function NavigationMenu({ useDropdown = true }: Props) {
 		<>
 			{data.map((item) =>
 				item.children?.length ? (
-					<div key={item.href}>
+					<div className="flex flex-col gap-6" key={item.href}>
 						{useDropdown ? (
 							<DropdownNavigationItem item={item} />
 						) : (
