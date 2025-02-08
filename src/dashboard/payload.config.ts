@@ -7,11 +7,11 @@ import { buildConfig } from "payload"
 import { fileURLToPath } from "url"
 
 import { MediaCollection, UserCollection } from "./collections"
+import { SettingsGlobal } from "./globals"
 import { ruTranslations } from "./translations/ru.translation"
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
-
 export default buildConfig({
 	admin: {
 		user: UserCollection.slug,
@@ -19,7 +19,7 @@ export default buildConfig({
 		theme: "all",
 		suppressHydrationWarning: true,
 		importMap: {
-			baseDir: path.resolve(dirname)
+			baseDir: "@/dashboard"
 		}
 	},
 	i18n: {
@@ -29,7 +29,7 @@ export default buildConfig({
 		}
 	},
 	collections: [UserCollection, MediaCollection],
-	globals: [],
+	globals: [SettingsGlobal],
 	editor: lexicalEditor(),
 	secret: process.env.PAYLOAD_SECRET || "",
 	localization: {

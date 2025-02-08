@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import { JetBrains_Mono } from "next/font/google"
 
+import { AppHeader } from "@/widgets/header"
+
 import "./globals.css"
 import { cn } from "@/shared/lib/utils"
 
@@ -20,13 +22,15 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html suppressHydrationWarning lang="en">
+		<html suppressHydrationWarning lang="ru">
 			<body
 				className={cn(
 					"bg-background min-h-screen antialiased",
 					jetbrainsMono.variable
 				)}
 			>
+				<AppHeader />
+
 				{children}
 			</body>
 		</html>

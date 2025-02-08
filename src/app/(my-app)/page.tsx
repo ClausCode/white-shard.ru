@@ -1,3 +1,5 @@
+"use static"
+
 import { Button } from "@/shared/ui/button"
 
 export default function Home() {
