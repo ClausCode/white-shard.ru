@@ -33,7 +33,12 @@ export function MobileMenu({
 			</SheetTrigger>
 			<SheetContent side="left">
 				<SheetTitle className="mb-5 border-b pb-5">{logo}</SheetTitle>
-				<div onClick={() => onOpenChange(false)}>{children}</div>
+				<div
+					className="flex h-full flex-col justify-between pb-12"
+					onClick={() => onOpenChange(false)}
+				>
+					{children}
+				</div>
 			</SheetContent>
 		</Sheet>
 	)

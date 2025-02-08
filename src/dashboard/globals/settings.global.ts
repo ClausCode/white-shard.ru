@@ -30,6 +30,31 @@ export const SettingsGlobal: GlobalConfig = {
 					type: "text",
 					label: "🔗 Ссылка",
 					defaultValue: "/"
+				},
+				{
+					name: "children",
+					type: "array",
+					label: "🔗 Дочерние ссылки",
+					fields: [
+						{
+							name: "label",
+							required: true,
+							type: "text",
+							label: "🏷️ Название"
+						},
+						{
+							name: "href",
+							required: true,
+							type: "text",
+							label: "🔗 Ссылка",
+							defaultValue: "/"
+						}
+					],
+					admin: {
+						components: {
+							RowLabel: "/custom/row-label#ArrayRowLabel"
+						}
+					}
 				}
 			],
 			admin: {

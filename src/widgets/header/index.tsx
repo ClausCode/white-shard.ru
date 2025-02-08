@@ -10,6 +10,7 @@ export async function AppHeader() {
 		<AppHeaderLayout
 			logo={<AppLogo />}
 			navigation={<Navigation />}
+			navigationMobile={<Navigation useDropdown={false} />}
 			contacts={<PhoneDisplay />}
 			actions={<ActionList />}
 		/>

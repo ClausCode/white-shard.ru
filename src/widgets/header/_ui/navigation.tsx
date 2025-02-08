@@ -4,11 +4,14 @@ import { NavigationSkeleton } from "../_skeleton/navigation-skeleton"
 
 import { NavigationMenu } from "./navigation-menu"
 
-export function Navigation() {
+type Props = {
+	useDropdown?: boolean
+}
+export function Navigation({ useDropdown = true }: Props) {
 	return (
-		<nav className="flex flex-col gap-6 text-lg font-medium md:flex-row md:text-base">
+		<nav className="relative flex h-full flex-col gap-6 text-lg font-medium lg:flex-row lg:text-base">
 			<Suspense fallback={<NavigationSkeleton />}>
-				<NavigationMenu />
+				<NavigationMenu useDropdown={useDropdown} />
 			</Suspense>
 		</nav>
 	)

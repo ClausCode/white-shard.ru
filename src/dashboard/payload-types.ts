@@ -229,6 +229,13 @@ export interface Setting {
     | {
         label: string;
         href: string;
+        children?:
+          | {
+              label: string;
+              href: string;
+              id?: string | null;
+            }[]
+          | null;
         id?: string | null;
       }[]
     | null;
@@ -248,6 +255,13 @@ export interface SettingsSelect<T extends boolean = true> {
     | {
         label?: T;
         href?: T;
+        children?:
+          | T
+          | {
+              label?: T;
+              href?: T;
+              id?: T;
+            };
         id?: T;
       };
   contacts?:
