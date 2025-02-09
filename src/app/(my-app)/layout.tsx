@@ -30,8 +30,7 @@ export default function RootLayout({
 				)}
 			>
 				<AppHeader />
-
-				{children}
+				<div className="container mx-auto flex-1">{children}</div>
 			</body>
 		</html>
 	)

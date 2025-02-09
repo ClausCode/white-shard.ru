@@ -16,8 +16,8 @@ export function AppHeaderLayout(props: Props) {
 	const [open, setOpen] = React.useState(false)
 
 	return (
-		<header className="supports-backdrop-filter:bg-background/60 sticky top-0 z-50 mx-auto w-full max-w-screen-xl backdrop-blur-sm">
-			<div className="container flex h-14 max-w-none items-center justify-self-center px-4">
+		<header className="supports-backdrop-filter:bg-background/60 sticky top-0 z-50 mx-auto w-full backdrop-blur-sm">
+			<div className="container flex h-14 max-w-screen-xl items-center justify-self-center px-4">
 				<div className="mr-2 lg:hidden">
 					<MobileMenu logo={props.logo} open={open} onOpenChange={setOpen}>
 						{props.navigationMobile}

@@ -2,6 +2,12 @@
 
 import Link from "next/link"
 
+export const metadata = {
+	title: "404 - Страница не найдена",
+	description:
+		"Извините, страница, которую вы ищете, не существует или была перемещена."
+}
+
 export default async function NotFound() {
 	return (
 		<div className="flex flex-col items-center justify-center px-4 py-32 text-center">
